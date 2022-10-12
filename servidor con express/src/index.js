@@ -14,7 +14,7 @@ class Contenedor {
 }
 
 const fs = require("fs");
-const nombreArchivo = "../productos.json";
+const nombreArchivo = "productos.json";
 const file = new Contenedor(nombreArchivo);
 
 const express = require("express");
