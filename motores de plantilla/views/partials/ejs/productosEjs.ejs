@@ -1,0 +1,27 @@
+<% if (cantidad) { %>
+    <table class="table table-striped tabla">
+        <thead class="rotulos">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% productos.forEach(element => { %>
+                <tr>
+                    <th scope="row"><%=element.id%></th>
+                    <td><%=element.title%></td>
+                    <td><%=element.price%> $</td>
+                    <td>
+                        <div class="div_img">
+                            <img class="img" src=<%=element.thumbnail %> alt=<%=element.title%>/>
+                        </div>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+<% } else { %>
+    <h2>No hay productos </h2>
+<% } %> 
