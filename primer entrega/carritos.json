@@ -7,15 +7,55 @@
 					"title": "lapiz",
 					"price": 100,
 					"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/pencil-pen-stationery-school-128.png",
+					"timestamp": "06-11-2022 10:12:21",
+					"codigo": "b21f7qwe-21lc-51e0-ac29-l4gft89326ld",
+					"descripcion": "lapiz comun",
+					"stock": 10,
 					"id": 1
 				}
-			],
+			]
+		]
+	},
+	{
+		"id": 2,
+		"products": [
+			[
+				{
+					"title": "cuaderno",
+					"price": 500,
+					"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-128.png",
+					"timestamp": "06-11-2022 10:12:22",
+					"codigo": "b21f7qwe-21lc-51e0-ac29-l4gft89326lu",
+					"descripcion": "cuaderno de escuela",
+					"stock": 10,
+					"id": 2
+				}
+			]
+		]
+	},
+	{
+		"id": 3,
+		"products": [
+			{
+				"title": "prueba",
+				"price": "12",
+				"thumbnail": "132121",
+				"codigo": "2e4aa281-825e-452b-9b7d-4a2ec31ddf7d",
+				"timestamp": "12-11-2022 03:11:65",
+				"id": 4
+			}
+		]
+	},
+	{
+		"id": 4,
+		"products": [
 			{
 				"title": "lapiz",
 				"price": 100,
 				"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/pencil-pen-stationery-school-128.png",
-				"timestamp": "06-11-2022 11:12:13",
-				"codigo": "gdsvjhvsdbjhsd",
+				"timestamp": "06-11-2022 10:12:21",
+				"codigo": "b21f7qwe-21lc-51e0-ac29-l4gft89326ld",
+				"descripcion": "lapiz comun",
 				"stock": 10,
 				"id": 1
 			},
@@ -23,20 +63,20 @@
 				"title": "lapiz",
 				"price": 100,
 				"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/pencil-pen-stationery-school-128.png",
-				"timestamp": "06-11-2022 11:12:13",
-				"codigo": "gdsvjhvsdbjhsd",
+				"timestamp": "06-11-2022 10:12:21",
+				"codigo": "b21f7qwe-21lc-51e0-ac29-l4gft89326ld",
+				"descripcion": "lapiz comun",
 				"stock": 10,
 				"id": 1
-			}
-		]
-	},
-	{
-		"id": 2,
-		"products": [
+			},
 			{
 				"title": "cuaderno",
 				"price": 500,
 				"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-128.png",
+				"timestamp": "06-11-2022 10:12:22",
+				"codigo": "b21f7qwe-21lc-51e0-ac29-l4gft89326lu",
+				"descripcion": "cuaderno de escuela",
+				"stock": 10,
 				"id": 2
 			}
 		]

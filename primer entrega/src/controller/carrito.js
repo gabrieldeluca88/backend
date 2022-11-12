@@ -1,6 +1,7 @@
-var createError = require('http-errors')
+const createError = require('http-errors')
 const fs = require('fs/promises');
 const path = require('path');
+const moment = require("moment");
 
 const filePath = path.resolve(__dirname, '../../carritos.json');
 
@@ -47,6 +48,7 @@ class CarritoAPI {
     
         const product = {
             id: intId,
+            timestamp: moment().format("DD-MM-YYYY HH:MM:SS"),
             products: []
         }
 

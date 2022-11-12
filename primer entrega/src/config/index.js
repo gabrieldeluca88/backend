@@ -1,5 +1,5 @@
 const config = {
-    administrador : false
+    administrador : true
 }
 
 module.exports = config
