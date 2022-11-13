@@ -29,9 +29,9 @@ rutaProductos.get("/", async (req, res) => {
     //res.render("showProducts", { productos: data, cantidad: validarArray})
 })
 
-rutaProductos.get("/product", async (req, res) => {
-    const { id } = req.query;
+rutaProductos.get("/:id", async (req, res) => {
     try{
+        const id = req.params.id;
         const product = await ProductosController.getById(id);
 
         res.json({
