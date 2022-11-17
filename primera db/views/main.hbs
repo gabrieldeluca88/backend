@@ -1,0 +1,25 @@
+<div class="center">
+    <div>
+        {{> hbs/formularioHbs}}
+        {{> hbs/productosHbs}}
+    </div>
+
+    <h3>Centro de mensajes</h3>
+    <div>
+        <form id="formulario">
+            <input type="email" id="userName" placeholder="Tu correo..."/>
+            <input type="text" id="userText" placeholder="Escribe mensaje..."/>
+            <input type="submit" value="Enviar"/>
+        </form>
+    </div>
+    <div id="mensajes">
+        <div class="mensajeContenedor">
+            <h4 class="tittleMensaje">gabriel@gmail.com</h4>
+            <div class="mensajeTexto">
+                <p class="horaMensaje">01-11-2022 10:11:74</p>
+                <p class="texto">Hola bienvenido!</p>
+            </div>
+        </div>
+
+    </div>
+</div>
