@@ -6,6 +6,10 @@
             <th scope="col">Nombre</th>
             <th scope="col">Precio</th>
             <th scope="col">Imagen</th>
+            <th scope="col">timestamp</th>
+            <th scope="col">codigo</th>
+            <th scope="col">descripcion</th>
+            <th scope="col">stock</th>
         </tr>
     </thead>
     <tbody id="tableContent">
@@ -19,6 +23,10 @@
                         <img class="img" src={{this.thumbnail}} alt={{this.title}}/>
                     </div>
                 </td>
+                <td>{{this.timestamp}} </td>
+                <td>{{this.codigo}} </td>
+                <td>{{this.descripcion}} </td>
+                <td>{{this.stock}} </td>
             </tr>
         {{/each}}
     </tbody>

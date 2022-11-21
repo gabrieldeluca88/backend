@@ -1,9 +1,9 @@
-import createError from "http-errors"
-import fs from "fs/promises"
-import path from "path"
-import moment from "moment"
-import { v4 as uuidv4 } from 'uuid';
-import { sql } from "./BDproductos"
+const createError = require ("http-errors")
+const fs = require ("fs/promises")
+const path = require ("path")
+const moment = require ("moment")
+const { v4: uuidv4 } = require('uuid');
+const {sql}  = require ("./BDproductos")
 
 const filePath = path.resolve(__dirname, '../../productos.json');
 
@@ -161,6 +161,7 @@ class ProductosAPI {
         const constroller = await sql.updateStockById(idProducto, newStock);
 
         /*arrayProductos.splice(indice, 1, newProduct);
+
         const DataActualizada = JSON.stringify(arrayProductos, null, "\t")
         await fs.writeFile(filePath, DataActualizada) */
 
@@ -170,6 +171,6 @@ class ProductosAPI {
 
 const ProductosController = new ProductosAPI(filePath);
 
-export {
+module.exports = {
     ProductosController
 }

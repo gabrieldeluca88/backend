@@ -1,5 +1,5 @@
-import knex from "knex";
-import { options } from "../options/mySql"
+const knex = require ("knex");
+const options = require ("../options/mariaDB")
 
 class ClientSql {
     constructor(config) {
@@ -36,6 +36,9 @@ class ClientSql {
         await this.knex.from("productos").where("id", id).update({title: newProd.title, price: newProd.price, thumbnail: newProd.thumbnail, descripcion: newProd.descripcion, stock: newProd.stock})
     }
 
+    async updateStockById(id, newStock){
+        await this.knex.from("productos").where("id", id).update({stock: newStock})
+    }
 
     async close(){
         await this.knex.destroy()
@@ -44,4 +47,4 @@ class ClientSql {
 
 const sql = new ClientSql(options);
 
-export {sql}
+module.exports = {sql}

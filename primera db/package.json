@@ -1,9 +1,8 @@
 {
-  "name": "app-chat-con-websocket",
+  "name": "zz",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
@@ -19,9 +18,10 @@
     "knex": "^2.3.0",
     "moment": "^2.29.4",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "socket.io": "^4.5.3",
-    "sqlite3": "^5.1.2"
+    "sqlite3": "^5.1.2",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

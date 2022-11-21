@@ -1,8 +1,7 @@
-import io from "socket.io"
-import { messageController } from "../controller/mensajes"
-import moment from "moment"
-import { ProductosController } from "../controller/productos"
-
+const io = require ("socket.io")
+const  {messageController} = require ("../controller/mensajes")
+const moment = require ("moment")
+const  {ProductosController} = require ("../controller/productos")
 
 let myWebSocketServer;
 
@@ -61,7 +60,7 @@ const getWsServer = () => {
     return myWebSocketServer;
 }
 
-export {
+module.exports = {
     initWsServer,
     getWsServer
 }

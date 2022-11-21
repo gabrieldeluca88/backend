@@ -1,5 +1,5 @@
-import knex from "knex";
-import { options } from "../options/mySql";
+const knex = require ("knex");
+const options = require ("../options/mariaDB");
 
 class ClientSqlite {
     constructor(config) {
@@ -31,4 +31,4 @@ class ClientSqlite {
 
 const sqlite = new ClientSqlite(options);
 
-export {sqlite}
+module.exports = {sqlite}

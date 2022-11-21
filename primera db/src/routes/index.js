@@ -1,8 +1,10 @@
-import { Router } from ('express')
-import productos  from ("../routes/productos")
+const  Router = require ("express")
+const productos = require ("../routes/productos")
+
 
 const rutaPrincipal = Router();
 
 rutaPrincipal.use("/productos", productos)
 
-export default rutaPrincipal;
+
+module.exports = rutaPrincipal;

@@ -1,9 +1,9 @@
-import { Router } from "express"
-import fs from "fs/promises"
-import path from "path"
-import admin from "../middlewares/auth"
-import { ProductosController } from "../controller/productos"
-import { sql } from "../controller/BDproductos"
+const  Router = require ("express")
+const fs = require("fs/promises")
+const path = require ("path")
+const admin = require ("../middlewares/auth")
+const  {ProductosController}  = require ("../controller/productos")
+const  {sql} = require ("../controller/BDproductos")
 
 const filePath = path.resolve(__dirname, '../../productos.json');
 
@@ -131,4 +131,4 @@ rutaProductos.delete("/:id", admin, async (req, res) => {
     })
 })
 
-export default rutaProductos;
+module.exports = rutaProductos;
