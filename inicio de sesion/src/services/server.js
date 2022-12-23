@@ -14,6 +14,8 @@ const { normalizado, desnormalizar } = require ("../controller/normalizado.js")
 const cookieParser = require ("cookie-parser")
 const session = require ('express-session');
 const MongoStore = require('connect-mongo');
+const passport = require ("passport");
+const {loginFunc, signUpFunc} = require ("../services/auth.js")
 
 faker.locale = "es"
 
@@ -68,6 +70,12 @@ const StoreOptions = {
 
 app.use(session(StoreOptions))
 
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use("login", loginFunc);
+passport.use("signup", signUpFunc);
+
 const users = [
     {
         username: 'rodolfo',
@@ -109,7 +117,7 @@ app.post("/login", async (req, res) => {
     }
 
     if(index < 0) {
-        res.status(401).json({msg: "No estas autorizado :c"});
+        res.status(401).json({msg: "No estas autorizado"});
     } else {
         const user = users[index];
         req.session.info = {

@@ -1,5 +1,5 @@
 {
-  "name": "login-por-formulario",
+  "name": "inicio-de-sesion",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
@@ -25,6 +26,8 @@
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
     "normalizr": "^3.6.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
     "socket.io": "^4.5.3",
     "sqlite3": "^5.1.2",
     "uuid": "^9.0.0"
