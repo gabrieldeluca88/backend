@@ -1,0 +1,30 @@
+<div class="center">
+    {{#if nombre}}
+    <div>
+        {{> hbs/bienvenido}}
+    </div>
+    {{/if}}
+    <div>
+        {{> hbs/formularioHbs}}
+        {{> hbs/productosHbs}}
+    </div>
+
+    <h3>Hola! envia un mensaje </h3>
+    <div>
+        <form id="formulario">
+            <input type="email" id="userName" placeholder="Tu correo..."/>
+            <input type="text" id="userText" placeholder="Escribe algo..."/>
+            <input type="submit" value="Enviar"/>
+        </form>
+    </div>
+    <div id="mensajes">
+        <div class="mensajeContenedor">
+            <h4 class="tittleMensaje">gabriel@gmail.com</h4>
+            <div class="mensajeTexto">
+                <p class="horaMensaje">06-10-2022 10:31:54</p>
+                <p class="texto">Hola como estas!</p>
+            </div>
+        </div>
+
+    </div>
+</div>

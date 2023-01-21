@@ -1,0 +1,36 @@
+{{#if cantidad}}
+<table class="table table-striped tabla">
+    <thead class="tablaTitulos">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">timestamp</th>
+            <th scope="col">codigo</th>
+            <th scope="col">descripcion</th>
+            <th scope="col">stock</th>
+        </tr>
+    </thead>
+    <tbody id="tableContent">
+        {{#each productos}}
+            <tr>
+                <th scope="row">{{this.id}}</th>
+                <td>{{this.title}}</td>
+                <td>{{this.price}} $</td>
+                <td>
+                    <div class="contenedor_img">
+                        <img class="img" src={{this.thumbnail}} alt={{this.title}}/>
+                    </div>
+                </td>
+                <td>{{this.timestamp}} </td>
+                <td>{{this.codigo}} </td>
+                <td>{{this.descripcion}} </td>
+                <td>{{this.stock}} </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<h2>No hay productos!</h2>
+{{/if}}
