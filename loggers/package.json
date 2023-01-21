@@ -9,7 +9,11 @@
     "dev": "nodemon ./src/index.js",
     "prueba": "nodemon src/index --p 8000 --m CLUSTER",
     "pruebaForever": "forever start src/index.js",
-    "listForever": "forever list"
+    "listForever": "forever list",
+    "start:profilling": "node --prof src/index.js",
+    "start:inspect": "node --inspect src/index.js",
+    "start:0x": "0x src/index.js",
+    "start:process": "node --prof-process isolate-info.log > isolate-info.txt"
   },
   "keywords": [],
   "author": "",
