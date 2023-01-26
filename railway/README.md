@@ -47,3 +47,7 @@ Probar con 0x
 3. Al terminar, acaba con el proceso de la primera consola, asi creando la carpeta de 0x
 4. Opcional: cambia el nombre del archivo.
 5. Abre la carpeta y abre el archivo "flamegraph.html" 
+
+link deploy railway:
+
+https://backend-production-14b2.up.railway.app/
