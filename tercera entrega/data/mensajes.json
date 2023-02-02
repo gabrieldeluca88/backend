@@ -1,0 +1,15 @@
+[
+	{
+		"_id": "639190d4264c6591a3a30b89",
+		"author": {
+			"nombre": "prueba",
+			"apellido": "prueba",
+			"edad": 17,
+			"alias": "prueba1",
+			"avatar": "https://123456.jpg",
+			"email": "prueba@gmail.com"
+		},
+		"text": "hola que tal?",
+		"__v": 0
+	}
+]
