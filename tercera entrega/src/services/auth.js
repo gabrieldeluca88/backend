@@ -1,6 +1,7 @@
 const passport = require ('passport');
 const LocalStrategy  = require ('passport-local').Strategy;
 const { usuariosModel } = require ('../schemas/user.js');
+const { transporter, emailOptions } = require ("./emailService.js")
 
 const strategyOptions = {
   usernameField: 'username',
@@ -11,13 +12,30 @@ const strategyOptions = {
 const signup = async (req, username, password, done) => {
   console.log('SIGNUP!');
   try {
-    const {email} = req.body
+    const {email, direccion, edad, numero, foto} = req.body
     const user = await usuariosModel.findOne({email});
     if (user) {
       return done(null, false, { message: 'Este email ya esta en uso' });;
     }
-    const newUser = new usuariosModel({username, email, password});
+    const newEdad = Math.floor(edad);
+    const newNumero = Math.floor(numero)
+    const newUser = new usuariosModel({username, email, password, direccion, newEdad, newNumero, foto});
     newUser.password = await newUser.encryptPassword(password);
+
+    const texto = "Se acaba de registrar un nuevo usuario:\n" + newUser
+
+    const emailOptions = {
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
+      subject: "¡Se unio un nuevo usuario!",
+      text: texto,
+    }
+    try{
+      const response = await transporter.sendMail(emailOptions);
+      console.log('Email enviado!');
+    }catch(error){
+      console.log(error);
+    }
     await newUser.save();
     return done(null, newUser);
   } catch (error) {

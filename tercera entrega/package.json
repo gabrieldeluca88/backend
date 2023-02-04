@@ -35,11 +35,13 @@
     "mongoose": "^6.7.5",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
+    "nodemailer": "^6.9.1",
     "normalizr": "^3.6.2",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "socket.io": "^4.5.4",
     "sqlite3": "^5.1.4",
+    "twilio": "^3.84.1",
     "uuid": "^9.0.0",
     "winston": "^3.8.2"
   },

@@ -17,6 +17,8 @@ rutaUsuarios.post('/signup', info, signUp)
 
 rutaUsuarios.post('/login',info, passport.authenticate('login', passportOptions), login);
 
+// rutaUsuarios.post("/logout", info, )
+
 rutaUsuarios.get('/home',info, isLoggedIn, getHome )
 
 module.exports = rutaUsuarios;
