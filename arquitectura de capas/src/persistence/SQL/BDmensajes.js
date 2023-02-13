@@ -1,5 +1,5 @@
 const knex = require ("knex");
-const options = require ("../options/mariaDB");
+const { options } = require ("../../options/mariaDB");
 
 class ClientSqlite {
     constructor(config) {

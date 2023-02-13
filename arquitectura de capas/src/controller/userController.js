@@ -20,4 +20,5 @@ const getHome = (req, res) => {
     res.json(req.session)
 }  
 
+
 module.exports = {signUp, login, getHome}

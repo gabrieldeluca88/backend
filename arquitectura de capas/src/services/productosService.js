@@ -3,9 +3,8 @@ const fs = require ("fs/promises")
 const path = require ("path")
 const moment = require ("moment")
 const { v4: uuidv4 } = require('uuid');
-const {sql}  = require ("./BDproductos")
-
-const { MongoProductosController } = require ("./productosMongo.js")
+const { sql } = require ("../persistence/SQL/BDproductos")
+const { MongoProductosController } = require ("../persistence/mongodb/productosMongo.js")
 
 const filePath = path.resolve(__dirname, '../../productos.json');
 
@@ -25,6 +24,7 @@ class ProductosAPI {
         /* FS:
         const productos = await fs.readFile(filePath, 'utf8');
         const arrayProductos = JSON.parse(productos); 
+
         SQL:
         const productos = await sql.getAllProducts()
         
@@ -55,6 +55,7 @@ class ProductosAPI {
         /* FS:
         const productos = await fs.readFile(filePath, 'utf8');
         const arrayProductos = JSON.parse(productos)
+
         SQL:
         const productos2 = await sql.getAllProducts() */
 
@@ -68,6 +69,7 @@ class ProductosAPI {
         if(productos2.length) {
             newId = productos2[productos2.length - 1].id + 1
         }
+
         const intId = Math.floor(newId) */
     
         const product = {
@@ -88,7 +90,9 @@ class ProductosAPI {
 
         /*FS
         arrayProductos.push(product);
+
         const newData = JSON.stringify(arrayProductos, null, "\t")
+
         await fs.writeFile(filePath, newData)
             return product
         */
@@ -98,6 +102,7 @@ class ProductosAPI {
         /*FS:
         const productos = await fs.readFile(filePath, 'utf8');
         const arrayProductos = JSON.parse(productos) 
+
         SQL:
         const productos = await sql.getAllProducts()*/
 
@@ -127,6 +132,7 @@ class ProductosAPI {
         
         /* FS: 
         arrayProductos.splice(indice, 1, productoActualizado);
+
         const DataActualizada = JSON.stringify(arrayProductos, null, "\t")
         await fs.writeFile(filePath, DataActualizada) */
 
@@ -137,11 +143,15 @@ class ProductosAPI {
         /*FS:
         const productos = await fs.readFile(filePath, 'utf8');
         const arrayProductos = JSON.parse(productos)
+
         SQL: const productos = await sql.getAllProducts()
         
         const indice = productos.findIndex(prod => prod.id == id);
+
         const controller = await sql.deleteProductById(id)
+
         arrayProductos.splice(indice, 1);
+
         const newData = JSON.stringify(arrayProductos, null, "\t")
         await fs.writeFile(filePath, newData) */
         
@@ -154,9 +164,11 @@ class ProductosAPI {
         /*fs:
         const productos = await fs.readFile(filePath, 'utf8');
         const arrayProductos = JSON.parse(productos); 
+
         SQL:
         const productos = await sql.getAllProducts()
         const indice = productos.findIndex(prod => prod.id == idProducto);
+
         const product = productos[indice]
         */
         
@@ -184,8 +196,10 @@ class ProductosAPI {
 
         /*SQL:
         const constroller = await sql.updateStockById(idProducto, newStock);
+
         FS:
         arrayProductos.splice(indice, 1, newProduct);
+
         const DataActualizada = JSON.stringify(arrayProductos, null, "\t")
         await fs.writeFile(filePath, DataActualizada) */
 
@@ -194,8 +208,6 @@ class ProductosAPI {
 }
 
 const ProductosController = new ProductosAPI(filePath);
-
-
 
 module.exports = {
     ProductosController

@@ -1,4 +1,4 @@
-const {CarritoModel} = require ("../schemas/carrito.js")
+const {CarritoModel} = require ("./schemas/carrito.js")
 
 class ClientMongo {
     async getAllCarrito() {
@@ -9,7 +9,7 @@ class ClientMongo {
     async getCarritoById(id) {
         const carrito = await CarritoModel.findById(id);
         if(!carrito){
-            return "Producto no encontrado "
+            return "Producto no encontrado :c"
         }
 
         return carrito

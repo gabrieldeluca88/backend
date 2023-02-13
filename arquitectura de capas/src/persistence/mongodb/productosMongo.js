@@ -1,4 +1,4 @@
-const {ProductsModel} = require ("../schemas/productos.js")
+const {ProductsModel} = require ("./schemas/productos.js")
 
 class ClientMongo {
     async getAllProducts() {

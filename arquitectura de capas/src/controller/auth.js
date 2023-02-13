@@ -1,7 +1,7 @@
 const passport = require ('passport');
 const LocalStrategy  = require ('passport-local').Strategy;
-const { usuariosModel } = require ('../schemas/user.js');
-const { transporter, emailOptions } = require ("./emailService.js")
+const { usuariosModel } = require ('../persistence/mongodb/schemas/user.js');
+const { transporter, emailOptions } = require ("../services/emailService.js")
 
 const strategyOptions = {
   usernameField: 'username',

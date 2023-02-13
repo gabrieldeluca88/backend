@@ -1,5 +1,4 @@
 const { Router } = require ("express")
-const admin = require ("../middlewares/auth")
 const { faker } = require('@faker-js/faker');
 const moment = require ("moment")
 const { v4: uuidv4 } = require('uuid');

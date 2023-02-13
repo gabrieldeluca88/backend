@@ -1,7 +1,7 @@
 const io = require ("socket.io")
-const  {messageController} = require ("../controller/mensajes")
+const  {messageController} = require ("./mensajesService")
 const moment = require ("moment")
-const  {ProductosController} = require ("../controller/productos")
+const  {ProductosController} = require ("./productosService")
 
 let myWebSocketServer;
 

@@ -1,6 +1,6 @@
 const mongoose = require ('mongoose');
 
-const connection = process.env.MONGO_ATLAS || "mongodb://localhost:27017/ecommerce" 
+const connection = process.env.MONGO_ATLAS || "mongodb://localhost:27017/coderhouse" 
 
 const initConnection = async () => {
     try {

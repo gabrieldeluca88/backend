@@ -1,4 +1,4 @@
-const {MensajesModel} = require ("../schemas/mensajes.js")
+const {MensajesModel} = require("./schemas/mensajes.js")
 
 class ClientMongo {
     async getAllMensajes() {

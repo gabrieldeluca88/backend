@@ -10,12 +10,12 @@ const morgan = require ("morgan");
 const { faker } = require('@faker-js/faker');
 const moment = require ("moment")
 const { v4: uuidv4 } = require('uuid');
-const { normalizado, desnormalizar } = require ("../controller/normalizado.js")
+const { normalizado, desnormalizar } = require ("../utils/normalizado.js")
 const cookieParser = require ("cookie-parser")
 const session = require ('express-session');
 const MongoStore = require('connect-mongo');
 const passport = require ("passport");
-const {loginFunc, signUpFunc} = require ("../services/auth.js")
+const {loginFunc, signUpFunc} = require ("../controller/auth.js")
 const compression = require ('compression');
 const logger = require ("../utils/logger.js")
 const info = require ("../middlewares/logger.js")
@@ -414,7 +414,6 @@ app.get('/*', info, (req, res) => {
         msg: "Esta ruta no existe :c"
     })
 })
-
 
 const myServer = http.Server(app)
 
