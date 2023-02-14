@@ -1,6 +1,6 @@
 const { Router } = require ("express")
 const info = require ("../middlewares/logger.js")
-const {Carrito} = require ("../controller/carritoController.js")
+const Carrito = require ("../controller/carritoController.js")
 
 const rutaCarrito = Router();
 

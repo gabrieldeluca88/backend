@@ -2,7 +2,7 @@ const  Router = require ("express")
 const path = require ("path")
 const admin = require ("../middlewares/auth")
 const info = require ("../middlewares/logger.js")
-const {Productos} = require ("../controller/productosController.js")
+const Productos = require ("../controller/productosController.js")
 
 
 const rutaProductos = Router();

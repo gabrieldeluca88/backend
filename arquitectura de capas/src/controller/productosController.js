@@ -2,7 +2,7 @@
 const path = require ("path")
 const {ProductosController} = require ("../services/productosService")
 //const {sql}  = require ("./BDproductos")
-const logger = require ("../itils/logger.js")
+const logger = require ("../utils/logger.js")
 
 // const filePath = path.resolve(__dirname, '../../productos.json');
 
