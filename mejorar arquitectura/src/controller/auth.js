@@ -1,6 +1,6 @@
 const passport = require ('passport');
 const LocalStrategy  = require ('passport-local').Strategy;
-const { usuariosModel } = require ('../persistence/mongodb/schemas/user.js');
+const { usuariosModel } = require ('../persistence/daos/mongodb/schemas/user.js');
 const { transporter, emailOptions } = require ("../services/emailService.js")
 
 const strategyOptions = {

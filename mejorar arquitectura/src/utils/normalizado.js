@@ -1,6 +1,6 @@
 const fs = require ('fs');
 const path = require ('path');
-const {MongoMensajesController} = require ("../persistence/mongodb/mensajesMongo.js")
+const {MongoMensajesController} = require ("../persistence/daos/mongodb/mensajesMongo.js")
 const { normalize, schema, denormalize  } = require ('normalizr');
 
 const filePath = path.resolve(__dirname, '../../data/mensajes.json');

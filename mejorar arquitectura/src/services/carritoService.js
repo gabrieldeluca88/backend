@@ -1,7 +1,7 @@
 const createError = require ("http-errors")
 const fs = require ("fs/promises")
 const path = require ("path")
-const {MongoCarritoController} = require ("../persistence/mongodb/carritoMongo.js")
+const {MongoCarritoController} = require ("../persistence/daos/mongodb/carritoMongo.js")
 
 const filePath = path.resolve(__dirname, '../../carritos.json');
 

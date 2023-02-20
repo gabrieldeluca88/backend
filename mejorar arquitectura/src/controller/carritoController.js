@@ -1,6 +1,6 @@
 const { carritoServices } = require ("../services/carritoService")
 const { ProductosController } = require ("../services/productosService")
-const { usuariosModel } = require ('../persistence/mongodb/schemas/user.js');
+const { usuariosModel } = require ('../persistence/daos/mongodb/schemas/user.js');
 const { twilioClient } = require ("../services/smsService.js");
 
 const newCar = async (req, res) =>{

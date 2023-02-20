@@ -59,5 +59,5 @@ class ClientMongo {
 const MongoProductosController = new ClientMongo();
 
 module.exports = {
-    MongoProductosController
+    MongoProductosController , ClientMongo
 }

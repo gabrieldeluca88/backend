@@ -1,6 +1,6 @@
 require('dotenv').config()
 const server = require ("./services/server")
-const {initConnection} = require ("./persistence/mongodb/db/database.js")
+const {initConnection} = require ("./persistence/daos/mongodb/db/database.js")
 const minimist = require  ('minimist');
 const cluster = require ('cluster');
 const os = require ('os');

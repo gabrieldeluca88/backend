@@ -1,8 +1,8 @@
 const createError = require ("http-errors")
 const fs = require ("fs/promises")
 const path = require ("path")
-const { sqlite } = require ("../persistence/SQL/BDmensajes")
-const {MongoMensajesController} = require ("../persistence/mongodb/mensajesMongo.js")
+const { sqlite } = require ("../persistence/daos/SQL/BDmensajes.js")
+const {MongoMensajesController} = require ("../persistence/daos/mongodb/mensajesMongo.js")
 
 const filePath = path.resolve(__dirname, '../../data/mensajes.json');
 

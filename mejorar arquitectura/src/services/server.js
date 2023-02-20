@@ -188,44 +188,14 @@ app.get("/", info, async (req, res) => {
     const cantidadObjetos = data.length
     const validarArray = cantidadObjetos > 0 ? true : false
 
-    let respuesta = []
-
-    for (let i = 0; i < data.length; i++) {
-        respuesta.push({
-            id: data[i]._id,
-            title: data[i].title,
-            price: data[i].price,
-            thumbnail: data[i].thumbnail,
-            timestamp: data[i].timestamp,
-            descripcion: data[i].descripcion,
-            codigo: data[i].codigo,
-            stock: data[i].stock
-        })
-        
-    }
-
-    res.render("main", { productos: respuesta, cantidad: validarArray})
+    res.render("main", { productos: data, cantidad: validarArray})
 })
 
 app.get("/productos", info, async (req, res) => {
     const data = await ProductosController.getAll()
-    let respuesta = []
-    for (let i = 0; i < data.length; i++) {
-        respuesta.push({
-            id: data[i]._id,
-            title: data[i].title,
-            price: data[i].price,
-            thumbnail: data[i].thumbnail,
-            timestamp: data[i].timestamp,
-            descripcion: data[i].descripcion,
-            codigo: data[i].codigo,
-            stock: data[i].stock
-        })
-        
-    }
     const cantidadObjetos = data.length
     const validarArray = cantidadObjetos > 0 ? true : false
-    res.render("showProducts", { productos: respuesta, cantidad: validarArray})
+    res.render("showProducts", { productos: data, cantidad: validarArray})
 })
 
 app.get("/productos-test", info, async (req, res) => {
