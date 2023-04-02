@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="../../styles/styles.css">
+</head>
+
+
+<body class="container">
+
+    <%- include("template/navBar") %>
+
+    <div class="titulo-home">
+        <h1 class="h1-home">
+            ¡ Hola <%= name %> ! <br>
+        </h1>
+    </div>
+    <div class="titulo-productos">
+        <h1>Productos</h1>
+    </div>
+
+    <div class="filter">
+        <p class="filter-content">Filtrar:</p>
+        <button class="filter-content btn-filter" id="maderayceramica">Maderas y ceramicas</button>
+        <button class="filter-content btn-filter" id="alfombra">Alfombras</button>
+    </div>
+
+    <div id="productos"></div>
+
+    <div id="productosFiltrados"></div>
+
+    <script src="../js/productos.js" type="module"></script>
+    
+    <script>
+        setTimeout(() => {
+            location.href = '/'
+        }, 600000)
+    </script>
+
+    
+</body>
+
+</html>

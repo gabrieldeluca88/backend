@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>Mi Cuenta</title>
+</head>
+<body class="container">
+    <%- include("template/navBar") %>
+
+    <h1 class="titulo-cuenta">Mi cuenta</h1>
+
+    <div class="datos">
+        <ol>
+            <li>Usuario: <%= email %></li>
+            <li>Nombre: <%= name %></li>
+            <li>Dirección: <%= address %></li>
+            <li>Celular: <%= phone %></li>
+        </ol>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            location.href = '/'
+        }, 600000)
+    </script>
+
+</body>
+</html>

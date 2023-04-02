@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="../../styles/styles.css">
+</head>
+
+<body class="container">
+    <%- include("template/navBar") %>
+
+
+            <h1 class="titulo-productos titulo-carrito">Centro de Mensajes
+            </h1>
+            <div class="part-form-chat">
+
+            <div class="ocultar" id="email"> <%= email %></div>
+
+
+
+            <div id="mensajes"></div>
+
+            <form id="formPublicarMensaje">
+                <input class="dato-prod" id="mensaje" name="message" type="text" placeholder="Ingresá un mensaje...">
+                <div id="errorMsj" class="text-error"></div>
+                <button class="boton-msj" id="enviar" type="submit">Enviar </button>
+            </form>
+        </div>
+        <div class="contenedor-misMensajes">
+            <button id="btn-filtro">Ver mis mensajes</button>
+            <div id="filtroMensajes"></div>
+        </div>
+
+    <script src="../js/chat.js"></script>
+
+    <script>
+        setTimeout(() => {
+            location.href = '/'
+        }, 600000)
+    </script>
+</body>
+</html>

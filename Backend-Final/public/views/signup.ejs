@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="../../styles/styles.css">
+</head>
+
+<body>
+    <div>
+        <div class="container login">
+            <h1 class="titulo">Registro de usuario</h1>
+            <br>
+            <form id="form"  method="POST" action="/signup">
+                <div class="form-login">
+                    <label class="label-form" for="nombre">Ingrese nombre</label>
+                    <input id="name" type="text" name="name" class="input-form" required>
+                </div>
+                <div class="form-login">
+                    <label class="label-form" for="email">Ingrese domicilio</label>
+                    <input id="address" type="text" name="address" class="input-form" required>
+                </div>
+                <div class="form-login">
+                    <label class="label-form" for="phone">Ingrese celular</label>
+                    <input id="phone" type="number" name="phone" class="input-form" required>
+                </div>
+                <div class="form-login">
+                    <label class="label-form" for="email">Ingrese email</label>
+                    <input id="email" type="email" name="username" class="input-form" required>
+                </div>
+                <div class="form-login">
+                    <label class="label-form" for="password">Ingrese contraseña</label>
+                    <input id="password" type="password" name="password" class="input-form" required>
+                </div>
+                <div class="form-login">
+                    <label class="label-form" for="password">Repita su contraseña</label>
+                    <input id="password2" type="password" name="password2" class="input-form" required>
+                    <div id="errorPassword" class="text-error"></div>
+                </div>
+                <div class="botones-login">
+                    <button id="registrar" class="boton-form ocultar">Registrarse</button>
+                </div>
+            </form>
+            <div class="botones-login">
+                <div id="okRegister" class="text-error">
+                    <%= okRegister%>
+                </div>
+            </div>
+            <div class="botones-login">
+                <button onclick="location.href='/login'" id="btn-login" class="boton-form">Iniciar sesión</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/signup.js" type="module"></script>
+</body>
+
+</html>
